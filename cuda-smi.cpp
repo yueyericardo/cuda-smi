@@ -27,14 +27,11 @@ int main() {
         CUDA_CALL(cudaGetDeviceProperties, &deviceProp, deviceId);
 
         //std::cout.imbue(std::locale("en_US.utf8"));
-        std::cout << "Device " << deviceId;
-        std::cout << " [PCIe " << deviceProp.pciDomainID << ":" << deviceProp.pciBusID
-                  << ":" << deviceProp.pciDeviceID << ".0]";
-        std::cout << ": " << deviceProp.name << " (CC " << deviceProp.major << "." << deviceProp.minor << ")";
+        std::cout << "Device " << deviceId <<": ";
+        std::cout << deviceProp.name;
         CUDA_CALL(cudaMemGetInfo, &memFree, &memTotal);
-        std::cout << ": " << std::setprecision(5) << memFree/(1024*1024.) 
-                  << " of " << memTotal/(1024*1024.) << " MB (i.e. "
-                  << std::setprecision(3) << 100*memFree/(float)memTotal << "%) Free"
+        std::cout << "\nMem Used: " << std::setprecision(5) << memTotal/(1024*1024.) - memFree/(1024*1024.) 
+                  << " MB / " << memTotal/(1024*1024.) << " MB  "
                   << std::endl;
     }
     return 0;
