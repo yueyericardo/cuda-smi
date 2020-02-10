@@ -28,7 +28,8 @@ When you run `cuda-smi`, it will give something like this:
 
 ```sh
 $ cuda-smi
-Device 0 [PCIe 0:1:0.0]: GeForce GT 750M (CC 3.0): 1584.6 of 2047.6 MB (i.e. 77.4%) Free
+Device 0: GeForce GTX 1080
+Mem Used: 3096 MB / 8191.7 MB  
 ```
 
 Your mileage may vary.
