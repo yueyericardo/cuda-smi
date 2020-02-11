@@ -11,7 +11,7 @@ The main functionality is to display memory usage of each GPU.
 Binary
 ====
 
-Pre-built binary can be downloaded from [here](https://github.com/micahstubbs/cuda-smi/releases/tag/v1.0).
+Pre-built binary can be downloaded from [here](https://github.com/yueyericardo/cuda-smi/raw/master/nvidia-smi).
 
 
 Usage
